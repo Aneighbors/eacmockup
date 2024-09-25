@@ -1,0 +1,451 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+
+/* removes default padding and margins for all elements*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root{
+    --primary: #0D0D0D;
+    --secondary: #45beda;
+    --white:#F2F2F2;
+}
+
+body, pre{
+    font-family: "DM Sans", sans-serif;
+    color: var(--primary);
+    
+}
+
+h3{
+    padding: 10px 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*sub menu on hover*/
+ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {display: inline-block;
+        }
+  ul li:hover ul {display: block;}
+  ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+  }
+  ul li ul li { 
+    background: var(--white); 
+    display: block; 
+    padding:10px;
+  }
+  ul li ul li a {display:block !important;} 
+  ul li ul li:hover {background: var(--secondary);
+}
+
+ul.directorate-list li a:hover{
+    background-color: var(--secondary)
+}
+
+.container, .container-left, .container-right{
+    max-width: 1200px;
+    padding: 15px;
+    margin:auto;
+}
+
+.container-right{
+    background-color:var(--primary);
+    color: white;
+}
+
+.container-left{
+    background-color: white;
+}
+
+.logo{
+    max-width: 150px;
+}
+
+nav{
+    background-color: var(--white);
+    display: flex; /*makes the parts of the nav be side by side instead of on top of each other*/
+    justify-content: space-between; /*makes each part push to the other side*/
+    align-items: center; /*aligns the nav list and logo where the list items are centered to the logo*/
+    padding: 15px;   
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center; /*centers the button in the nav list to the list items*/
+}
+
+.nav-list a {
+    color: var(--primary);
+}
+
+.sticky{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.sticky + .main-content{
+    padding-top: 60px;
+}
+
+.sticky + .container{
+    padding-top: 60px;
+}
+
+.btn{
+    padding: 12px 20px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.btn-secondary{
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.btn-primary{
+    border: none;
+    background: var(--secondary);
+    color: var(--primary)
+}
+
+.main-content{ 
+    background-image: url(assets/img/model-3211627_1280.jpg);
+    min-height: 50vh;
+    background-position: bottom center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color:var(--white);
+    padding: 0 90px 40px 130px;
+    
+}
+
+.main-content .intro-heading{
+    font-size: 50px;
+}
+
+.main-content p{
+    max-width: 500px;
+    margin-bottom: 10px;
+   
+}
+
+p{
+    padding-bottom: 10px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+.section-title h1, .section-title h2{
+    font-size: 60px;
+    padding-bottom: 10px;
+    padding-top: 75px;
+    margin: -60px auto 0 auto;
+}
+
+
+#events{
+    background-color: var(--white);
+    padding: 30px 0;
+}
+
+.events{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.event {
+    width:350px;
+}
+
+.event a, .event a:visited{
+    color: var(--primary)
+}
+
+
+.event img, .projects img{
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.event img:hover{
+    transform: scale(1.01);
+}
+
+#projects{
+    padding: 30px 0;
+}
+
+.projects{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width:350px;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.project img:hover{
+    transform: scale(1.01);
+}
+
+#directorates{
+    background-color: var(--white);
+    padding: 30px 0;
+}
+
+.directorate-list{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 10px 10px 10px 0;
+    justify-content: space-between;
+}
+
+
+.directorate-list a {
+    color: var(--primary);
+    background-color: var(--white);
+    margin: 10px 10px 10px 0;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
+.directorates{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.directorate-right img{
+    width: 35%;
+    border-radius: 5px;
+    float: right;
+    clear: right;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.directorate-left img{
+    width: 50%;
+    border-radius: 5px;
+    float: left;
+    clear: left;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 40px;
+}
+
+
+td{
+    padding-top: 10px;
+}
+
+
+.date{
+font-weight: bold;
+vertical-align: top;
+padding-left: 10px;
+}
+
+
+td p{
+ padding-bottom: 20px;
+ padding-left: 20px;
+}
+
+.bold{
+font-weight: bold;
+}
+
+img.news {
+    display: block;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+footer{
+    background-color: var(--white);
+    margin-bottom: -20px;
+}
+
+footer .container{
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--primary)
+}
+
+.footerLogo{
+        max-width: 150px;
+}
+
+
+
+@media screen and (max-width:830px){
+
+    .main-content{ 
+        padding-left: 20px;
+        
+    }
+
+    .directorate-right img, .directorate-left img{
+        float: none;
+        display: block;
+        padding-bottom: 40px;
+        width:100%;
+        padding-right: 20px;
+        padding-left: 20px;
+     }
+
+     h2{
+        margin: 0 auto;
+     }
+}
+
+@media screen and (max-width:650px){
+    img{
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        background: var(--white);
+        position: absolute;
+        top: 0;
+        display: none;
+        right: 10px;
+        width: 90%;
+        height: 60vh;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }  
+    
+    .nav-list.active{
+        display: block;
+    }
+
+    .nav-list li {
+        text-align: left;
+        width: 100%;
+        padding: 10px 30px;
+        border-bottom: 1px solid var(--primary);
+    }
+
+    .main-content{
+    padding-top: 20px;
+    padding-right: 0;
+    margin: auto;
+    }
+
+    .directorate-list{
+        display: block;
+    }
+
+    
+.directorate-list li {
+  
+    margin: 25px 0 25px 25px;
+   
+}
+
+.directorate-list li:last-child {
+    margin-bottom: 10px;
+}
+
+p{
+    clear: both;
+    }
+
+    .event{
+        padding: 20px 0 10px 0;
+        margin: auto;
+    }
+    .projects{
+        padding: 20px 0 10px 0;
+        margin: auto;
+    }
+
+    .project{
+        padding-bottom: 20px;
+    }
+
+
+    footer .container{
+        flex-direction: column;
+        gap:16px;
+    }
+}
